@@ -1,13 +1,19 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata: 
-  name: first-service
+  name: first-deployment
 spec: 
-  type: NodePort
-  ports: 
-  - port: 8099
-    targetPort: 80
-    protocol: TCP
-    nodePort: 30090
   selector: 
-    app: first-nginx
+    matchLabels: 
+      app: first-nginx
+  replicas: 3
+  template: 
+    metadata: 
+      labels: 
+        app: first-nginx
+    spec: 
+      containers: 
+      - name: first-nginx
+        image: nginx:1.18
+        ports: 
+        - containerPort: 80
