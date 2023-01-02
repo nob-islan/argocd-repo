@@ -15,5 +15,6 @@ spec:
       containers: 
       - name: first-ecr
         image: 667444918077.dkr.ecr.ap-northeast-1.amazonaws.com/first-ecr:1.0.1
+        tty: true
         ports: 
         - containerPort: 80
