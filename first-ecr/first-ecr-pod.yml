@@ -5,4 +5,5 @@ metadata:
 spec:
   containers:
     - name: first-ecr
-      image: 667444918077.dkr.ecr.ap-northeast-1.amazonaws.com/first-ecr:1.0.1
+      # image: 667444918077.dkr.ecr.ap-northeast-1.amazonaws.com/first-ecr:1.0.1
+      image: public.ecr.aws/i2s7b9x8/first-ecr-pub:latest
